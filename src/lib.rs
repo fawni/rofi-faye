@@ -109,11 +109,11 @@ impl Mode<'_> {
     fn copy(&mut self, selected: usize) {
         if let Some(mut ctx) = DisplayServer::select().try_context() {
             ctx.set_contents((&self.entries[selected].output).into())
-                .unwrap();
+                .ok();
         } else {
-            let mut ctx = Osc52ClipboardContext::new().unwrap();
-            ctx.set_contents((&self.entries[selected].output).into())
-                .unwrap();
+            Osc52ClipboardContext::new()
+                .map(|mut ctx| ctx.set_contents((&self.entries[selected].output).into()))
+                .ok();
         }
     }
 
