@@ -6,7 +6,9 @@ eager evaluation for [faye](https://codeberg.org/fawn/faye) in [rofi](https://gi
 
 <details>
     <summary>Video showcase</summary>
-    <video src=".meta/showcase.webm" autoplay controls></video>
+
+[showcase.webm](https://github.com/user-attachments/assets/d1c9d9c1-8ae4-483c-84fb-4310c08eb50f)
+
 </details>
 
 ## Requirements

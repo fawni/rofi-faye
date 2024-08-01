@@ -1,1 +1,6 @@
+# rust
 /target
+
+# media
+.meta/*.webm
+.meta/*.mov
