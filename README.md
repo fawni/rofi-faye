@@ -24,7 +24,7 @@ Clone the repo and change directroy into it.
 or
 
     cargo build --release
-    sudo cp -u ./target/release/librofi_faye.so /lib/rofi/faye.so
+    sudo cp -u ./target/release/libfaye.so /lib/rofi/faye.so
 
 ## Usage
 

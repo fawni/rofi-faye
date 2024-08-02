@@ -8,6 +8,7 @@ repository = "https://codeberg.org/faye/rofi"
 description = "eager evaluation for faye in rofi"
 
 [lib]
+name = "faye"
 crate-type = ["cdylib"]
 
 [dependencies]
