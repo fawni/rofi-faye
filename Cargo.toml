@@ -12,7 +12,9 @@ name = "faye"
 crate-type = ["cdylib"]
 
 [dependencies]
-copypasta-ext = { version = "0.4.4", default-features = false, features = ["x11-bin", "wayland-bin", "osc52"] }
 faye = { version = "0.6.1", default-features = false }
+
 rofi-mode = "0.4.0"
 rofi-plugin-sys = "0.4.0"
+
+copypasta-ext = { version = "0.4.4", default-features = false, features = ["x11-bin", "wayland-bin", "osc52"] }
