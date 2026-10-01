@@ -8,8 +8,6 @@ use faye::prelude::{Context as FayeContext, Parser};
 
 rofi_mode::export_mode!(Mode<'_>);
 
-const DEFAULT_MESSAGE: &str = "faye 0.6.1";
-
 struct Mode<'rofi> {
     #[allow(dead_code)]
     api: rofi_mode::Api<'rofi>,
@@ -25,7 +23,7 @@ impl<'rofi> rofi_mode::Mode<'rofi> for Mode<'rofi> {
         Ok(Self {
             api,
             faye: FayeContext::default(),
-            last_input: DEFAULT_MESSAGE.to_owned(),
+            last_input: format!("faye {}", env!("CARGO_PKG_VERSION")),
             entries: vec![Entry::new(
                 String::from("Add to history"),
                 String::from("Add to history"),
@@ -147,7 +145,7 @@ impl Mode<'_> {
     }
 
     fn is_init(&self) -> bool {
-        self.last_input.eq(DEFAULT_MESSAGE)
+        self.last_input.eq(&format!("faye {}", env!("CARGO_PKG_VERSION")))
     }
 
     fn is_history_button(&self, selected: usize) -> bool {
